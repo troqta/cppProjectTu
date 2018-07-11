@@ -1,0 +1,4 @@
+enum speedFactor{
+    KMH,
+    MPH
+};

@@ -1,0 +1,4 @@
+enum tempFactor{
+    Celsius,
+    Farenhait
+};
