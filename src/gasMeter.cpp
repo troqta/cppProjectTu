@@ -1,7 +1,7 @@
 #include <Gauge.cpp>;
 #include <errCode.cpp>
 
-class OdoMeter : public Gauge{
+class gasMeter : public Gauge{
     public:
         uint16_t convertVal(uint16_t val){
             
@@ -26,9 +26,9 @@ class OdoMeter : public Gauge{
             return currentValue;
         }
         void display(){
-            cout << "Current odometer value is" << getCurrentValue;
+            cout << "Current gas value is" << getCurrentValue;
         }
-        OdoMeter(uint16_t min, uint16_t max){
+        gasMeter(uint16_t min, uint16_t max){
             this.minValue = min;
             this.maxValue = max;
             this.currentValue = min;

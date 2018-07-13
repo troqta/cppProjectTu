@@ -1,4 +1,4 @@
 enum tempFactor{
-    Celsius,
-    Farenhait
+    Celsius = 0,
+    Farenhait = 1
 };

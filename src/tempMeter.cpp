@@ -1,15 +1,15 @@
 #include <Gauge.cpp>;
-#include <speedFactor.cpp>
+#include <tempFactor.cpp>
 #include <errCode.cpp>
 
-class speedoMeter : public Gauge{
+class tempMeter : public Gauge{
     private:
-        speedFactor currentFactor;
+        tempFactor currentFactor;
 
     public:
         uint16_t convertVal(uint16_t val){
             if(currentFactor == 1){
-                return val / 1.60934;
+                return val*1.8 +32;
             }
             return val;
         }
@@ -32,7 +32,7 @@ class speedoMeter : public Gauge{
             return convertVal(currentValue);
         }
         void display(){
-            cout << "Current speed is" << getCurrentValue;
+            cout << "Current temp is" << getCurrentValue;
         }
         speedFactor getFactor(){
             return currentFactor;
@@ -47,7 +47,7 @@ class speedoMeter : public Gauge{
             this.currentFactor = factor;
             return 5;
         }
-        speedoMeter(uint16_t min, uint16_t max, speedFactor currentFactor){
+        tempMeter(uint16_t min, uint16_t max, tempFactor currentFactor){
             this.minValue = min;
             this.maxValue = max;
             this.currentValue = min;

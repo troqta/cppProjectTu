@@ -3,8 +3,7 @@
 
 class Gauge{
     public:
-    virtual uint16_t getCurrentValue();
-    virtual errCode setCurrentValue(uint16_t currentValue);
+    virtual void display();
 
     protected: 
         const uint16_t minValue;
@@ -12,7 +11,7 @@ class Gauge{
 
         uint16_t currentValue;
 
-        void display();
+        
 
 
 };
